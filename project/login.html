@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"> 
+        <title>Log In</title>
+        <link rel="stylesheet" href="/assert/style.css">
+        <link rel="stylesheet" href="/assert/icons/fontawesome-free-6.4.2-web/css/all.css">
+    </head>
+    <body>
+       <div class="login-container">
+            <div class="form-container ">
+                <div class="login-form-section">
+                    <div class="form-header">
+                        <h2>Sign In</h2>
+                    </div>
+
+                    <div class="form-infor">
+                        <form action="">
+                            <p class="username-label">
+                                <i class="fa-solid fa-user"></i>
+                                <label for="username-input">Username</label><br>
+                            </p>
+                            <input type="text" class="username-section" name="" id="username-input" placeholder="Enter username" required><br>
+                            <p class="password-label">
+                                <i class="fa-solid fa-lock"></i>
+                                <label for="password-input">Password</label><br>
+                            </p>
+                            <input type="password" class="password-section" name="" id="password-input" placeholder="Enter password" required><br>
+                            
+                            
+                            <div class="password-addition">
+                                <div class="show-password col-half">
+                                    <input type="checkbox" onclick="ShowPassword()"> Show password 
+                                </div>
+                                <div class="forgot-password col-half">
+                                    <a href="">Forgot password</a>
+                                </div>
+                            </div>
+
+                            <button class="sign-in-btn">Login</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+       </div>
+
+       <script>
+            function ShowPassword() {
+                var show = document.getElementById('password-input');
+                if (show.type === "password") {
+                  show.type = "text";
+                } else {
+                  show.type = "password";
+                }
+            }
+       </script>
+    </body>
+</html>
